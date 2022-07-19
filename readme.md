@@ -6,7 +6,7 @@ The **MASTER** branch of this boilerplate will provide you with all the followin
 
 1. Express app.
 
-2. Static routing serving resources in the /dist folder (this is usually the build of a vue or react project). 
+2. Static routing serving resources in the `/dist` folder (this is usually the build of a vue or react project). 
 
 3. Express router for a basic API.
 
@@ -20,13 +20,14 @@ Switch to the **MONGO** branch if you want to get a connection to MongoDB out of
 
 **FIRST** of all, run `npm i` to install all dependencies.
 
-**THEN**, create a `secrets.js` file in the root of the project. This file shall contains all the custom variables that you want to keep private. The content of this fil must look like this:
+**THEN**, create a `secrets.js` file in the root of the project. This file shall contains all the custom variables that you want to keep private. The content of this file must look like this:
 
 ```
 const allSecrets = {
     //The following line is needed only if you opt for the Mongo banch
     connection: 'connection_string_2_mongo', 
     //Needed to handle enquiries
+    //Set values of the properties to the real credentials of your email server
     mailer: {
         user: 'myaccount@mydomain.com',
         pw: 'my_email_password',
