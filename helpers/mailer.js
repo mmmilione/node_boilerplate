@@ -11,7 +11,7 @@ const transporter = nodemailer.createTransport({
     },
 });
 
-const sendEmail = async (from, to, subject, text, html, replayTo) => {
+const sendEmail = async (from, to, subject, text, html, replyTo) => {
     try {
         await transporter.sendMail({
             from, // sender address
@@ -19,7 +19,7 @@ const sendEmail = async (from, to, subject, text, html, replayTo) => {
             subject, // Subject line
             text, // plain text body
             html, // html body
-            replayTo, //Reply to the user email
+            replyTo, //Reply to the user email
         });
         return true;
     } catch (error) {
